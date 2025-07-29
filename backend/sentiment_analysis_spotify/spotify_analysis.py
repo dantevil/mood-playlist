@@ -1,11 +1,11 @@
 
 import requests
-import random  # 🔧 You were missing this import
+import random  
 
 SPOTIFY_TOKEN_URL = "https://accounts.spotify.com/api/token"
 SPOTIFY_SEARCH_URL = "https://api.spotify.com/v1/search"
-
-client_id = "API_CLIENT_ID"
+# To add the client id and secret for token generation
+client_id = "API_CLIENT_ID" 
 client_secret = "API_CLIENT_SECRET"
 
 def get_access_token():
@@ -22,7 +22,7 @@ def get_access_token():
         return None
 
 def get_random_offset():
-    return random.randint(0, 20)  # ⚠️ Safer range — Spotify Search caps results closer to 2K in practice
+    return random.randint(0, 20)
 
 def search_tracks(query, limit=5):
     access_token = get_access_token()
@@ -46,7 +46,6 @@ def search_tracks(query, limit=5):
         return []
 
     data = response.json()
-    print("data", data)
     
     return [
         {
