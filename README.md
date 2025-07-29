@@ -16,5 +16,5 @@ An intelligent web app that curates personalized Spotify playlists based on the 
 - Clone the repo:
 git clone https://github.com/your-username/mood-playlist.git
 - Install dependencies for Flask and React
-- Configure your Spotify API credentials in .env
+- Configure your Spotify API credentials in spotify_analysis.py file
 - Run the development server and enjoy the mood-curated beats!
